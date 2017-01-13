@@ -1,0 +1,13 @@
+<!--pages/search/search.wxml-->
+<!--<text>pages/search/search.wxml</text>-->
+<view>
+    <view class="search">
+        <input class="input" placeholder="请输入" maxlength="11" type="number" bindinput="bindinput"/>
+        <button class="search_button" bindtap="getText">查询</button>
+    </view>
+
+    <view class="area_operator_view">
+        <text>该号码归属地为：</text>
+        <text>{{area_operator}}</text>
+    </view>
+</view>
