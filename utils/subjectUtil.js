@@ -4,7 +4,7 @@ function processSubjects(subjects) {
     this.processSubject(subject);
     }
   }
-function   processSubject(subject) {
+function  processSubject(subject) {
     var title = subject.title;
     var directors = subject.directors;
     var directorStr = "";
