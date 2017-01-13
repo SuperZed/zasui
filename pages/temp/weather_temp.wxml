@@ -1,11 +1,12 @@
 <template name="weather">
       <view class="weather_item">
         <view class="date"><text>{{item.daytime}}</text></view>
+        <view class="line"></view>
         <view class="weather_view">
             <view class="weather">
                 <text>{{item.day_weather}}</text>
                 <text>{{item.night_wind_power}}</text>
-                <text>{{item.day_air_temperature}}</text>
+                <text>{{item.day_air_temperature}}℃</text>
             </view>
             <image class="weather_img" src="{{item.day_weather_pic}}"></image>
         </view>

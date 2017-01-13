@@ -1,14 +1,49 @@
 /* pages/weather/weather.wxss */
+.content{
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.weather_list{
+    padding-top: 120rpx;
+}
 .weather_item{
     display: flex;
     flex-direction: column;
 }
-.title{
-    margin: 10rpx;
+.search_top{
+    display: flex;
+    flex-direction: row;
+    padding: 10rpx;
+    background: #fff;
+    margin-bottom: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+}
+.input{
+    width: 55%;
+    background: #fff;
+    font-size: 16px;
+    margin-left: 30px;
+    padding: 10px;
+    align-self: center;
+    border-radius: 10rpx;
+    border:1px solid #eee
+}
+.search_button{
+    height: 90rpx;
+    align-self: center;
 }
 .date{
-    background: #eee;
-    padding: 5rpx
+    background: #fff;
+    padding: 5rpx;
+    margin-left: 30rpx
 }
 .weather_view{
     width: 100%;
@@ -27,4 +62,16 @@
     height: 100rpx;
     align-self: center;
     float: right
+}
+.weather_item{
+    width: auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 1px,1px,1px rgba(0,0,0,2);
+    margin-bottom: 15px;
+    padding: 5px;
+    position: relative;
+}
+.line{
+    border: 1px dashed #CCC;
 }

@@ -1,17 +1,21 @@
-/* pages/search/search.wxss */
 .search{
     display: flex;
     flex-direction: row;
-    padding-top: 30px;
+    margin-top: 20px;   
 }
 .input{
-    background: #eee;
+    width: 45%;
+    background: #fff;
     font-size: 16px;
     margin-left: 30px;
-    padding: 10px
+    padding: 10px;
+    align-self: center;
+    border-radius: 10rpx;
+    border:1px solid #eee
 }
 .search_button{
-    height: auto;
+    height: 90rpx;
+    align-self: center;
 }
 .area_operator_view{
     margin-left: 30px;

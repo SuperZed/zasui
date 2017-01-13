@@ -1,6 +1,6 @@
 // pages/weather/weather.js
 Page({
-  data:{},
+  data:{text:''},
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
   },
@@ -17,10 +17,16 @@ Page({
   onUnload:function(){
     // 页面关闭
   },
-  getWeather:function(){
+  bindinput:function(e){
+    this.data.text=e.detail.value;
+  },
+searchWeather:function(){
+  this.getWeather(this.data.text);
+},
+  getWeather:function(city){
     var that=this;
     wx.request({
-      url: 'https://route.showapi.com/9-9?area=%E6%B7%B1%E5%9C%B3&showapi_appid=30673&showapi_sign=dddb698d2a3c4b5190574629a641713a',
+      url: 'https://route.showapi.com/9-9?area='+city+'&showapi_appid=30673&showapi_sign=dddb698d2a3c4b5190574629a641713a',
       data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
@@ -37,4 +43,5 @@ Page({
       }
     })
   }
+
 })

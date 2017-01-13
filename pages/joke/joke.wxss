@@ -1,4 +1,24 @@
 /* pages/joke/joke.wxss */
+.content{
+    background: #eee;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10rpx;
+}
 .joke_item{
-    padding: 5rpx;
+       width: auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 1px,1px,1px rgba(0,0,0,2);
+    margin-bottom: 15px;
+    padding: 5px;
+    position: relative;
+}
+.title{
+    font-size: 24px;
+}
+.line{
+    border: 1px dashed #CCC;
+    margin-top: 8rpx;
+    margin-bottom: 8rpx;
 }

@@ -1,13 +1,21 @@
 /* pages/testIndex/testIndex.wxss */
 .content{
-  background: #B3B2B2;
+  background: #eee;
   min-height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10rpx;
 }
 .movie{
-  display:flex;
-  flex-direction:row;
-  padding:10rpx 20rpx;
-  border-bottom: 1px rgba(255,255,255,.2) solid;
+    display:flex;
+    flex-direction:row;
+    width: auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 1px,1px,1px rgba(0,0,0,2);
+    margin-bottom: 15px;
+    padding: 5px;
+    position: relative;
 }
 .pic{
   float:left;
@@ -38,29 +46,6 @@
     height: 75rpx;
     border-radius: 50%;
 }
-.swiper-tab{  
-    width: 100%;  
-    border-bottom: 1rpx solid #777777;  
-    text-align: center;  
-    line-height: 60rpx;
-}  
-.swiper-tab-list{  
-    font-size: 30rpx;  
-    display: inline-block;  
-    width: 33.33%;  
-    color: #777777;  
-}
-.on{ 
-    color: #da7c0c;  
-    border-bottom: 4rpx solid #da7c0c;
-}  
-  
-.swiper-box{ 
-    display: block; 
-    height: 100%; 
-    width: 100%; 
-    overflow: hidden; 
-}  
-.swiper-box view{  
-    text-align: center;  
+.text{
+  color: #000;
 }

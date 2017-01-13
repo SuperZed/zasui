@@ -1,8 +1,14 @@
 <!--pages/weather/weather.wxml-->
-<view>
-    <view class="title">敬请期待</view>
-    <import src="../temp/weather_temp.wxml"/>
-    <block wx:for="{{weather}}">
-        <template is="weather" data="{{item}}"/>
-    </block>
+
+<view class="content">
+    <view class="search_top">
+        <input class="input" placeholder="请输入城市名称" bindinput="bindinput"/>
+        <button class="search_button" bindtap="searchWeather">搜索</button>
+    </view>
+    <view class="weather_list">
+        <import src="../temp/weather_temp.wxml"/>
+        <block wx:for="{{weather}}">
+            <template is="weather" data="{{item}}"/>
+        </block>
+    </view>
 </view>

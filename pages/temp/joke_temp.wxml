@@ -1,6 +1,7 @@
 <template name="joke">
       <view class="joke_item">
-        <view class="title"><text>{{item.title}}</text></view>
+        <view><text class="title">{{item.title}}</text></view>
+        <view class="line"></view>
         <view class="text"><text>{{item.text}}</text></view>
     </view>
 </template>
