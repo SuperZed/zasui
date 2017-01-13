@@ -1,2 +1,8 @@
 <!--pages/joke/joke.wxml-->
-<text>敬请期待</text>
+<view>
+    <text>敬请期待</text>
+    <import src="../temp/joke_temp.wxml"/>
+    <block wx:for="{{joke}}">
+        <template is="joke" data="{{item}}"/>
+    </block>
+</view>

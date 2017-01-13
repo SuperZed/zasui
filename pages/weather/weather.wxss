@@ -4,7 +4,7 @@
     flex-direction: column;
 }
 .title{
-    margin: 10rpx
+    margin: 10rpx;
 }
 .date{
     background: #eee;
