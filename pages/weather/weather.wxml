@@ -1,2 +1,15 @@
 <!--pages/weather/weather.wxml-->
-<text>敬请期待</text>
+<view>
+    <view class="title">敬请期待</view>
+    <view class="content">
+        <view class="date"><text>2017-01-13</text></view>
+        <view class="weather_view">
+            <view class="weather">
+                <text>微风</text>
+                <text>微风</text>
+                <text>微风</text>
+            </view>
+            <image class="weather_img" src="/image/tool.png"></image>
+        </view>
+    </view>
+</view>

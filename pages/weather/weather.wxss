@@ -1,1 +1,28 @@
 /* pages/weather/weather.wxss */
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    margin: 10rpx
+}
+.date{
+    background: #eee;
+    padding: 5rpx
+}
+.weather_view{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+.weather{
+    display: flex;
+    flex-direction: column;
+}
+.weather_img{
+    width: 100rpx;
+    height: 100rpx;
+    align-self: flex-end;
+    float: right
+}

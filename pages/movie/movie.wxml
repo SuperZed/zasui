@@ -1,5 +1,5 @@
 <view class="content">
-        <import src="../temp/temp.wxml"/>
+        <import src="../temp/movie_temp.wxml"/>
         <block wx:for="{{movie}}">
             <template is="movie" data="{{item}}"/>
         </block>

@@ -26,7 +26,7 @@
         "selectedIconPath" : "image/home.png"  
       }
       ,{
-        "pagePath": "pages/tool/tool",
+        "pagePath": "pages/weather/weather",
         "text": "功能",
         "iconPath" : "image/tool1.png",  
         "selectedIconPath" : "image/tool.png"  
