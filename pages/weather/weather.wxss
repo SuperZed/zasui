@@ -1,5 +1,5 @@
 /* pages/weather/weather.wxss */
-.content{
+.weather_item{
     display: flex;
     flex-direction: column;
 }
@@ -14,15 +14,17 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-content: space-around;
+    margin-top: 20rpx
 }
 .weather{
+    width: 70%;
     display: flex;
     flex-direction: column;
+    margin-left: 30rpx
 }
 .weather_img{
     width: 100rpx;
     height: 100rpx;
-    align-self: flex-end;
+    align-self: center;
     float: right
 }
