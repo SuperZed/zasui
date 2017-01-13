@@ -3,8 +3,6 @@
   var app = getApp();
 Page({
 data:{
-  title_text:'标题',
-  content:'正文',
   winWidth: 0,  
   winHeight: 0,  
   // tab切换  
@@ -27,9 +25,16 @@ onLoad:function(options){
       "title": "加载中...",
       "icon": "loading",
       "duration":　10000
+    });
+    wx.getLocation({
+      type: "gcj02",
+      success: function(res) {
+        var latitude = res.latitude;
+        var longitude = res.longitude;
+        that.loadCity(latitude, longitude, that.loadMovie)
+      }
     })
-    // that.bindViewTap();
-    that.loadMovie();
+    // that.loadMovie();
 },
 onReady:function(){
   // 页面渲染完成
@@ -43,50 +48,34 @@ onHide:function(){
 onUnload:function(){
   // 页面关闭
 },
-click:function(event){
-    wx.showToast({
-      title: '成功',
-      icon: 'success',
-      duration: 2000
-    })
-  this.setData({title_text:'测试而已'})
-},
-go:function() {
-  wx.navigateTo({
-    url: '../test1/test1'
-  })
-},
-
-// 滑动切换tab 
-bindChange: function( e ) {  
-  var that = this;  
-  that.setData( { currentTab: e.detail.current });  
-},  
-//点击tab切换 
-swichNav: function(e) {  
-  var that = this;  
-  if( this.data.currentTab === e.target.dataset.current ) {  
-    return false;  
-  } else {  
-    that.setData( {  
-      currentTab: e.target.dataset.current  
-    })  
-  }  
-},
-  loadMovie: function () {
+loadCity: function (latitude, longitude, callback) {
+        var that = this;
+        var u='https://route.showapi.com/238-2?from=5&lat='+latitude+'&lng='+longitude+'&showapi_appid=30673&showapi_sign=dddb698d2a3c4b5190574629a641713a';
+        wx.request({
+            url: u,
+            header: {
+                'content-type': 'application/json'
+            },
+            success: function(res) {
+                var city = res.data.showapi_res_body.addressComponent.city;
+                city = city.substring(0,city.length-1);
+                var url = "https://api.douban.com/v2/movie/in_theaters?city=" + city;
+                callback(url);
+            }
+        })
+    },
+loadMovie: function (url) {
     var that = this;
     wx.request({
-      url: 'https://api.douban.com/v2/movie/in_theaters?city=深圳',
+      url: url,
        header: {
         "Content-Type": "application/json,application/json"
        },
       success: function(res) {
-        // console.log(res);
         var subjects = res.data.subjects;
         if(subjects.length < 1) {
           return;
         }
-      
         subjectUtil.processSubjects(subjects);
         that.setData({
           movie: subjects
@@ -94,29 +83,8 @@ swichNav: function(e) {
         wx.hideToast();
       }
     })
-  },
-
-bindViewTap:function(){
-  var that = this;
-  console.log('请求数据');
-  wx.request({
-    url: 'http://ldm-blog.top/index/getACList',
-    data: {},
-    header: {
-      'content-type': 'application/json'
-    },
-    method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-    success: function(res){
-      that.setData({list:res.data.list})
-      wx.hideToast();
-      // console.log(res.data.list)
-    },
-    fail: function() {
-      console.log('fail');
-    }
-})
 },
-  detail: function(e){
+detail: function(e){
    app.detail(e);
   }
 
