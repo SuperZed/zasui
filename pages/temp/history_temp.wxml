@@ -1,0 +1,11 @@
+<template name="history">
+  <view class="history_item" bindtap="detail" id="{{item.id}}">
+      <view class="title">
+        <text>{{item.title}}</text>
+        <text>{{item.year}}-{{item.month}}-{{item.day}}</text>
+      </view>
+      <view style="width:100%">
+        <image src="{{item.img}}" mode="aspectFit" class="pic"></image>
+      </view>
+  </view>
+</template>

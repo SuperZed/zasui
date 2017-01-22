@@ -4,5 +4,6 @@
         <button class="button" bindtap="phone">手机归属地查询</button> 
         <button class="button" bindtap="joke">笑话大全</button>
         <button class="button" bindtap="weather">天气查询</button>
+        <button class="button" bindtap="y_today">历史上的今天</button>
     </view>
 </view>

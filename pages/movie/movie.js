@@ -34,7 +34,6 @@ onLoad:function(options){
         that.loadCity(latitude, longitude, that.loadMovie)
       }
     })
-    // that.loadMovie();
 },
 onReady:function(){
   // 页面渲染完成

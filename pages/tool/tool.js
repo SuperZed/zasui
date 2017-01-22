@@ -30,5 +30,10 @@ Page({
     wx.navigateTo({
         url:"../weather/weather"
     })
+  },
+  y_today:function(e){
+    wx.navigateTo({
+        url:"../history/history"
+    })
   }
 })

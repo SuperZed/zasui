@@ -27,9 +27,7 @@ App({
   globalData:{
     userInfo:null
   },
-    detail: function(e){
-    console.log(e);
-    console.log(e.currentTarget.id);
+  detail: function(e){
     wx.setStorageSync("movieId", e.currentTarget.id);
     wx.navigateTo({
         url:"../detail/detail?id=" + e.currentTarget.id

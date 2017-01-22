@@ -1,0 +1,6 @@
+<view class="content">
+    <import src="../temp/history_temp.wxml"/>
+    <block wx:for="{{history}}">
+        <template is="history" data="{{item}}"/>
+    </block>
+</view>

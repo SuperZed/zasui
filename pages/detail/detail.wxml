@@ -13,4 +13,5 @@
         <view class="detail summary">
             <text>{{movie.summary}}</text>
         </view>
+     </view>
 </view>

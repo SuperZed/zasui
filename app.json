@@ -7,7 +7,8 @@
     "pages/search/search",
     "pages/tool/tool",
     "pages/joke/joke",
-    "pages/weather/weather"
+    "pages/weather/weather",
+    "pages/history/history"
   ],
   "window":{
     "backgroundTextStyle":"light",

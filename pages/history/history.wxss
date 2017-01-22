@@ -1,0 +1,25 @@
+/* pages/history/history.wxss */
+.content{
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5rpx
+}
+.history_item{
+    width: auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 1px,1px,1px rgba(0,0,0,2);
+    margin-bottom: 15px;
+    padding: 5px;
+    position: relative;
+}
+.title{
+    display: flex;
+    flex-direction: column
+}
+.pic{
+    width: 100%;
+}

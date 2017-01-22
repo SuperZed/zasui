@@ -20,26 +20,20 @@ Page({
   bindinput:function(e){
     this.data.text=e.detail.value;
   },
-searchWeather:function(){
-  this.getWeather(this.data.text);
-},
+  searchWeather:function(){
+      this.getWeather(this.data.text);
+  },
   getWeather:function(city){
     var that=this;
     wx.request({
       url: 'https://route.showapi.com/9-9?area='+city+'&showapi_appid=30673&showapi_sign=dddb698d2a3c4b5190574629a641713a',
       data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      // header: {}, // 设置请求的 header
-      success: function(res){
-        console.log(res.data.showapi_res_body.dayList);
+      success: function(res){// success
         that.setData({weather:res.data.showapi_res_body.dayList});
-        // success
       },
-      fail: function() {
-        // fail
-      },
-      complete: function() {
-        // complete
+      fail: function() {// fail
+        
       }
     })
   }
